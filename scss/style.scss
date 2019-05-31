@@ -1,0 +1,50 @@
+@import 'var';
+@import 'function';
+
+.mdBanner {
+  @include media('pad') {
+    height: 400px !important;
+  }
+
+  @include media('phone') {
+    height: 200px !important;
+  }
+}
+
+.mdRecipe {
+  @include media('phone') {
+    .in {
+      padding: 0 !important;
+    }
+  }
+
+  .banner {
+    .img {
+      @include media('phone') {
+        background-size: 100% auto !important;
+      }
+    }
+  }
+
+  &.Invertebrate {
+    .banner {
+      .img {
+        @include media('phone') {
+  
+          height: 450px !important;
+        }
+      }
+    }
+  }
+
+  &.food {
+    .banner {
+      .img {
+        @include media('phone') {
+        
+          height: 390px !important;
+        }
+      }
+    }
+  }
+}
