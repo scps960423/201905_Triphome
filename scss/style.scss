@@ -11,10 +11,29 @@
   }
 }
 
+.mdSeafoodSort {
+
+  a {
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
 .mdRecipe {
   @include media('phone') {
     .in {
       padding: 0 !important;
+    }
+  }
+
+  a {
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 
@@ -30,7 +49,7 @@
     .banner {
       .img {
         @include media('phone') {
-  
+
           height: 450px !important;
         }
       }
@@ -41,8 +60,50 @@
     .banner {
       .img {
         @include media('phone') {
-        
+
           height: 390px !important;
+        }
+      }
+    }
+  }
+}
+
+//----彈跳動畫
+@keyframes hover_Big {
+  0% {
+    top: 0;
+  }
+
+  25% {
+    top: -15px;
+  }
+
+  50% {
+    top: -10px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.mdFrozenSeafood {
+  .fish {
+    li {
+      a {
+        img {
+          position: relative;
+          transition: $transition;
+        }
+
+        &:hover {
+          img {
+            position: relative;
+            animation: hover_Big 0.5s linear forwards;
+            -moz-animation: hover_Big 0.5s linear forwards;
+            -webkit-animation: hover_Big 0.5s linear forwards;
+            -o-animation: hover_Big 0.5s linear forwards;
+          }
         }
       }
     }

@@ -9,10 +9,23 @@
   }
 }
 
+.mdSeafoodSort a {
+  transition: 150ms;
+}
+.mdSeafoodSort a:hover {
+  opacity: 0.8;
+}
+
 @media screen and (max-width: 560px) {
   .mdRecipe .in {
     padding: 0 !important;
   }
+}
+.mdRecipe a {
+  transition: 150ms;
+}
+.mdRecipe a:hover {
+  opacity: 0.8;
 }
 @media screen and (max-width: 560px) {
   .mdRecipe .banner .img {
@@ -28,6 +41,32 @@
   .mdRecipe.food .banner .img {
     height: 390px !important;
   }
+}
+
+@keyframes hover_Big {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -15px;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.mdFrozenSeafood .fish li a img {
+  position: relative;
+  transition: 150ms;
+}
+.mdFrozenSeafood .fish li a:hover img {
+  position: relative;
+  animation: hover_Big 0.5s linear forwards;
+  -moz-animation: hover_Big 0.5s linear forwards;
+  -webkit-animation: hover_Big 0.5s linear forwards;
+  -o-animation: hover_Big 0.5s linear forwards;
 }
 
 /*# sourceMappingURL=style.css.map */
